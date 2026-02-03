@@ -10,6 +10,12 @@ sgnGuards x | x < 0 = -1
             | x == 0 = 0
             | otherwise = 1
 
+grade :: (Ord a, Num a) => a -> Char
+grade x | x >= 90 = 'A'
+        | x >= 80 = 'B'
+        | x >= 70 = 'C'
+        | otherwise = 'F'
+
 main :: IO ()
 main = do
     putStrLn "Please enter a number"
